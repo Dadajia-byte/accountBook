@@ -8,7 +8,7 @@ const shortid = require('shortid')
 
 // 导入moment
 const moment = require('moment');
-const AccountModel = require('../models/AccountModel');
+const AccountModel = require('../../models/AccountModel');
 
 /* 记账本的列表 */
 router.get('/account', function (req, res, next) {

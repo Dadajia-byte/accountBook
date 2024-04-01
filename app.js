@@ -8,6 +8,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/web/index');
 var webRouter = require('./routes/api/index');
 const authRouter = require('./routes/web/auth');
+const authAPIRouter = require('./routes/api/auth');
 var app = express();
 
 // 引入 express-session connect-mongo
@@ -49,6 +50,7 @@ app.use(session({
 app.use('/', indexRouter);
 app.use('/api', webRouter)
 app.use('', authRouter)
+app.use('/api', authAPIRouter)
 
 // 响应404
 app.use(function (req, res, next) {

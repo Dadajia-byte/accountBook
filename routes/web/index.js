@@ -12,6 +12,11 @@ const AccountModel = require('../../models/AccountModel');
 // 导入检测登录中间件
 const checkLogin = require('../../midwares/checkLogin')
 
+// 添加首页路由规则
+router.get('/', (req, res) => {
+  res.redirect('/account')
+})
+
 /* 记账本的列表 */
 router.get('/account', checkLogin, function (req, res, next) {
   // 获取所有账单信息

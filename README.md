@@ -10,6 +10,7 @@
 版本一，数据以文件的形式存储于 lowdb 中。<br/>
 版本二，数据用mongdb存储，校验使用session，请求接口并无保护可以随意发送请求<br/>
 版本三，校验使用jwt，同时接口有token保护。
+版本四，采用前后端分离的形式构建，使用jwt维护接口，并用mongdb存储数据。后端代码在[这里](https://github.com/Dadajia-byte/Account_express)，前端代码在[这里](https://github.com/Dadajia-byte/Account_React)
 后续可能会对进行升级。
 ### 更新记录
 1. 将lowdb文件存储形式转化为mongdb数据库存储
